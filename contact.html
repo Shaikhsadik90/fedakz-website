@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logo-img {
+        height: 55px;
+        /* change if needed */
+        width: auto;
+    }
+
+    .logo-text {
+        margin-left: 8px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Fedakz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+
+
+            <a href="index.html" class="logo">
+                <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+                <span class="logo-text">FEDAKZ</span>
+            </a>
+
+            <button class="mobile-toggle">☰</button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="construction.html" class="nav-link">Construction</a></li>
+                <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+                <li><a href="interior.html" class="nav-link">Interior</a></li>
+                <li><a href="contact.html" class="nav-link active btn btn-primary">Get Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="section" style="padding-top: 120px;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h1 style="font-size: 3rem; margin-bottom: 20px;">GET IN TOUCH</h1>
+                <p style="color: var(--text-muted); font-size: 1.2rem;">Ready to start your project? We're here to help.
+                </p>
+            </div>
+
+            <div class="grid grid-2"
+                style="background: var(--bg-card); border: 1px solid var(--border); padding: 40px; align-items: start;">
+
+                <div>
+                    <h2 style="margin-bottom: 30px;">CONTACT INFO</h2>
+
+                    <div style="display: flex; flex-direction: column; gap: 30px;">
+                        <div class="flex" style="gap: 20px;">
+                            <div
+                                style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                📍</div>
+                            <div>
+                                <h4 style="font-size: 0.9rem;">OFFICE</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">123 Industrial Ave, Logistics
+                                    Park<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="gap: 20px;">
+                            <div
+                                style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                📞</div>
+                            <div>
+                                <h4 style="font-size: 0.9rem;">PHONE</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="flex" style="gap: 20px;">
+                            <div
+                                style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                ✉️</div>
+                            <div>
+                                <h4 style="font-size: 0.9rem;">EMAIL</h4>
+                                <p style="color: var(--text-muted); font-size: 0.9rem;">info@fedakz.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/mvzqvpoz" method="POST">
+
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" name="first_name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" name="first_name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" rows="5" class="form-textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">SEND MESSAGE</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: 40px;">
+                <div class="footer-col">
+
+                    <a href="index.html" class="logo">
+                        <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+                        <span class="logo-text">FEDAKZ</span>
+                    </a>
+
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Global leaders in logistics, construction,
+                        renovation, and interior design.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>SERVICES</h3>
+                    <ul>
+                        <li><a href="construction.html">Construction</a></li>
+                        <li><a href="construction.html">Renovation</a></li>
+                        <li><a href="interior.html">Interior Design</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>CONTACT</h3>
+                    <ul>
+                        <li>123 Industrial Ave, NY</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@fedakz.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>NEWSLETTER</h3>
+
+                    <form action="mailto:admin@arrahmantax.com" method="post" enctype="text/plain"
+                        style="display: flex; gap: 5px;">
+
+                        <input type="email" name="User Email" placeholder="Email" required
+                            style="padding: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white;">
+
+                        <button type="submit"
+                            style="padding: 8px 16px; background: var(--primary); border: none; font-weight: bold; cursor: pointer;">
+                            GO
+                        </button>
+                    </form>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Fedakz Group. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

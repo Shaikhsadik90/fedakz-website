@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 55px;   /* change if needed */
+  width: auto;
+}
+.logo-text {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fedakz - Global Logistics & Construction</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+
+      <a href="index.html" class="logo">
+        <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+        <span class="logo-text">FEDAKZ</span>
+      </a>
+      
+
+      <button class="mobile-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="construction.html" class="nav-link">Construction</a></li>
+        <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+        <li><a href="interior.html" class="nav-link">Interior</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary">Get Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="hero-logistics.jpg" alt="Hero Background" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container relative">
+      <div class="hero-content">
+        <span class="hero-subtitle">Welcome to Fedakz</span>
+        <h1 class="hero-title">BUILDING DREAMS <br> <span>MOVING THE WORLD</span></h1>
+        <p class="hero-text">Your trusted partner in Construction, Renovation, Interior Design, and Global Logistics. We
+          deliver excellence from foundation to destination.</p>
+        <div class="flex space-x-4">
+          <a href="construction.html" class="btn btn-primary">Our Services</a>
+          <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="flex justify-between items-center mb-4">
+        <div>
+          <span class="text-primary" style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">What We
+            Do</span>
+          <h2>Our Expertise</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Card 1 -->
+        <article class="service-card">
+          <img src="hero-construction.jpg" class="service-bg">
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9" />
+                <path d="M17.64 15 22 10.64" />
+                <path
+                  d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25V7.86c0-.55-.45-1-1-1H14.5c-.85 0-1.65-.33-2.25-.93L11 4.64" />
+              </svg>
+            </div>
+            <h3 class="service-title">CONSTRUCTION</h3>
+            <p class="service-desc">Full-scale construction services for commercial and residential projects. From
+              ground-up builds to major structural work.</p>
+            <a href="construction.html" class="service-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card">
+          <img src="hero-interior.jpg" class="service-bg">
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" />
+                <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z" />
+                <path d="M5 18v2" />
+                <path d="M19 18v2" />
+              </svg>
+            </div>
+            <h3 class="service-title">INTERIOR DESIGN</h3>
+            <p class="service-desc">Luxury interior design and decoration services. Creating spaces that inspire and
+              function beautifully.</p>
+            <a href="interior.html" class="service-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card">
+          <img src="hero-logistics.jpg" class="service-bg">
+          <div class="service-content">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 17h4V5H2v12h3" />
+                <path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5" />
+                <path d="M14 17h1" />
+                <circle cx="7.5" cy="17.5" r="2.5" />
+                <circle cx="17.5" cy="17.5" r="2.5" />
+              </svg>
+            </div>
+            <h3 class="service-title">LOGISTICS</h3>
+            <p class="service-desc">Seamless supply chain solutions. We manage the flow of goods across international
+              borders with precision.</p>
+            <a href="logistics.html" class="service-link">Learn More &rarr;</a>
+          </div>
+        </article>
+
+        <!-- CTA Card -->
+        <div class="cta-box">
+          <h3>READY TO START?</h3>
+          <p>Contact us today for a free consultation and quote for your next project.</p>
+          <a href="contact.html" class="btn btn-dark">GET A QUOTE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4" style="margin-bottom: 40px;">
+        <div class="footer-col">
+
+          <a href="index.html" class="logo">
+            <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+            <span class="logo-text">FEDAKZ</span>
+          </a>
+          
+
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Global leaders in logistics, construction, renovation,
+            and interior design.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>SERVICES</h3>
+          <ul>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="construction.html">Renovation</a></li>
+            <li><a href="interior.html">Interior Design</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT</h3>
+          <ul>
+            <li>123 Industrial Ave, NY</li>
+            <li>+1 (555) 123-4567</li>
+            <li>info@fedakz.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>NEWSLETTER</h3>
+
+          <form action="mailto:admin@arrahmantax.com" method="post" enctype="text/plain"
+            style="display: flex; gap: 5px;">
+
+            <input type="email" name="User Email" placeholder="Email" required
+              style="padding: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white;">
+
+            <button type="submit"
+              style="padding: 8px 16px; background: var(--primary); border: none; font-weight: bold; cursor: pointer;">
+              GO
+            </button>
+          </form>
+        </div>
+
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Fedakz Group. All rights reserved.</p>
+          <div class="social-links">
+            <!-- Social icons here -->
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

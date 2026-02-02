@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    height: 55px;
+    /* change if needed */
+    width: auto;
+  }
+
+  .logo-text {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Construction - Fedakz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+
+
+      <a href="index.html" class="logo">
+        <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+        <span class="logo-text">FEDAKZ</span>
+      </a>
+      <button class="mobile-toggle">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="construction.html" class="nav-link active">Construction</a></li>
+        <li><a href="logistics.html" class="nav-link">Logistics</a></li>
+        <li><a href="interior.html" class="nav-link">Interior</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary">Get Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <img src="hero-construction.jpg" alt="Construction Header" class="page-header-bg">
+    <div class="hero-overlay"></div>
+    <div class="container page-header-content">
+      <h1>CONSTRUCTION <br> & RENOVATION</h1>
+      <p class="hero-text">Building foundations for the future with precision engineering and master craftsmanship.</p>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <div>
+          <span class="text-primary" style="font-weight: 700; text-transform: uppercase;">Our Services</span>
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px;">EXPERTISE IN EVERY BRICK</h2>
+          <p style="color: var(--text-muted); margin-bottom: 30px;">
+            At Fedakz, construction is more than just building—it's about creating enduring legacies. Whether it's a
+            commercial high-rise or a residential renovation, we bring the same level of dedication, safety, and quality
+            control to every project.
+          </p>
+
+          <ul class="grid" style="gap: 15px;">
+            <li class="flex items-center" style="gap: 10px;">
+              <span style="color: var(--primary);">✓</span> Commercial Building Construction
+            </li>
+            <li class="flex items-center" style="gap: 10px;">
+              <span style="color: var(--primary);">✓</span> Residential Renovations
+            </li>
+            <li class="flex items-center" style="gap: 10px;">
+              <span style="color: var(--primary);">✓</span> Structural Reinforcement
+            </li>
+            <li class="flex items-center" style="gap: 10px;">
+              <span style="color: var(--primary);">✓</span> Project Management
+            </li>
+          </ul>
+
+          <div style="margin-top: 40px;">
+            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+          </div>
+        </div>
+
+        <div>
+          <!-- Simple Project Gallery Mockup -->
+          <div
+            style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+            PROJECT GALLERY 1
+          </div>
+          <div
+            style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+            PROJECT GALLERY 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="grid grid-4" style="margin-bottom: 40px;">
+        <div class="footer-col">
+
+          <a href="index.html" class="logo">
+            <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
+            <span class="logo-text">FEDAKZ</span>
+          </a>
+
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Global leaders in logistics, construction, renovation,
+            and interior design.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>SERVICES</h3>
+          <ul>
+            <li><a href="construction.html">Construction</a></li>
+            <li><a href="construction.html">Renovation</a></li>
+            <li><a href="interior.html">Interior Design</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>CONTACT</h3>
+          <ul>
+            <li>123 Industrial Ave, NY</li>
+            <li>+1 (555) 123-4567</li>
+            <li>info@fedakz.com</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>NEWSLETTER</h3>
+
+          <form action="mailto:admin@arrahmantax.com" method="post" enctype="text/plain"
+            style="display: flex; gap: 5px;">
+
+            <input type="email" name="User Email" placeholder="Email" required
+              style="padding: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); color: white;">
+
+            <button type="submit"
+              style="padding: 8px 16px; background: var(--primary); border: none; font-weight: bold; cursor: pointer;">
+              GO
+            </button>
+          </form>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Fedakz Group. All rights reserved.</p>
+        </div>
+      </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

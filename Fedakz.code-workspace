@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/Fedakz-Logistics-Management"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Fedakz"
+	}
+}
