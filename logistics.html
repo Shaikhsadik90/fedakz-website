@@ -18,6 +18,71 @@
     font-weight: bold;
     font-size: 18px;
   }
+  /* Responsive Design - Media Queries */
+
+@media (max-width: 992px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+  
+  .grid-2, .grid-4 {
+    grid-template-columns: 1fr; /* Tablet aur Phone pe columns ek ke niche ek aa jayenge */
+    gap: 30px;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem; /* Header text thoda chota mobile ke liye */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Menu logic */
+  .nav-links {
+    display: none; /* Default mein chhupa rahega */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Navbar ki height ke mutabiq */
+    left: 0;
+    width: 100%;
+    background: #000; /* Aapke theme ka background color */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  /* Jab 'active' class script.js ke zariye add hogi tab menu dikhega */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: block; /* Hamburger button dikhega */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .page-header {
+    height: 60vh; /* Mobile par header height adjust */
+  }
+
+  .grid-2 > div:first-child {
+    order: 2; /* Mobile par image text ke niche dikhegi */
+  }
+}
+
+/* Image responsive karne ke liye */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 </style>
 
 <head>
@@ -167,7 +232,15 @@
       </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+
+const toggle = document.querySelector('.mobile-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+  </script>
 </body>
 
 </html>

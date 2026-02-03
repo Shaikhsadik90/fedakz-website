@@ -18,6 +18,74 @@
     font-weight: bold;
     font-size: 18px;
   }
+  /* --- Responsive Rules for Construction Page --- */
+
+@media (max-width: 992px) {
+  /* Tablet views */
+  .grid-2, .grid-4 {
+    grid-template-columns: 1fr; /* Do columns ki jagah ek column ho jayega */
+    gap: 40px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile views */
+  .navbar .container {
+    padding: 10px 20px;
+  }
+
+  /* Hamburger Menu Styling */
+  .nav-links {
+    display: none; /* Mobile par menu chhupa rahega */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Navbar ke thik niche */
+    left: 0;
+    width: 100%;
+    background: #111; /* Dark background jo aapke theme se match kare */
+    padding: 20px;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  /* Jab JS toggle karega tab dikhega */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: block; /* Hamburger icon dikhane ke liye */
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  /* Gallery boxes ko mobile par thoda chota karna */
+  div[style*="height: 250px"] {
+    height: 200px !important;
+  }
+}
+
+/* Images aur video containers ko responsive rakhne ke liye */
+img, .page-header-bg {
+  max-width: 100%;
+  height: auto;
+}
 </style>
 
 <head>
