@@ -72,6 +72,7 @@ html, body {
     padding: 10px 20px;
   }
 
+  
   /* Hamburger Menu Styling */
   .nav-links {
     display: none; /* Mobile par menu chhupa rahega */
@@ -273,7 +274,19 @@ img, .page-header-bg {
       </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            // Ye line 'active' class ko bar-bar add aur remove karegi
+            navLinks.classList.toggle('active');
+        });
+    }
+});
+  </script>
 </body>
 
 </html>

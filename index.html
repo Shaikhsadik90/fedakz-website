@@ -16,7 +16,23 @@
   font-weight: bold;
   font-size: 18px;
 }
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Mobile par chhupa rahega */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        background: #000; /* Ya aapka theme color */
+        z-index: 999;
+    }
 
+    /* Ye wo class hai jo JS add karega */
+    .nav-links.active {
+        display: flex !important; 
+    }
+}
 
 </style>
 
