@@ -67,18 +67,19 @@ html, body {
     display: block !important;
   }
 }
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
+/* Logo ko bada hone se rokne ke liye specific fix */
+.logo-img {
+    width: auto !important; /* Global 100% width ko cancel karega */
+    height: 55px !important; /* Size fix rakhega */
+    display: inline-block !important; /* Align sahi rakhega */
+    object-fit: contain !important;
+}
 
-  .logo-img {
-    height: 55px;
-    /* change if needed */
-    width: auto;
-  }
-
+.logo {
+    display: flex !important;
+    align-items: center !important;
+    width: fit-content !important; /* Container ko pura phailne se rokega */
+}
   .logo-text {
     margin-left: 8px;
     font-weight: bold;
