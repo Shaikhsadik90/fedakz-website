@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+  /* --- Overflow & Scroll Fix --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Yeh side scroll ko block kar dega */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Aapki desktop width */
+  margin: 0 auto;
+  padding: 0 15px; /* Mobile par gaps ke liye */
+  box-sizing: border-box;
+}
+
+/* Grid ko mobile par single column karna zaroori hai */
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .grid-2, .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Header images ko screen ke bahar jane se rokne ke liye */
+  .page-header-bg {
+    width: 100%;
+    object-fit: cover;
+  }
+}
   .logo {
     display: flex;
     align-items: center;
