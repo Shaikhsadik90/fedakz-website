@@ -1,128 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  /* --- Overflow & Scroll Fix --- */
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* Yeh side scroll ko block kar dega */
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px; /* Aapki desktop width */
-  margin: 0 auto;
-  padding: 0 15px; /* Mobile par gaps ke liye */
-  box-sizing: border-box;
-}
-
-/* Grid ko mobile par single column karna zaroori hai */
-@media (max-width: 768px) {
-  .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .grid-2, .grid-4 {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* Header images ko screen ke bahar jane se rokne ke liye */
-  .page-header-bg {
-    width: 100%;
-    object-fit: cover;
-  }
-}
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .logo-img {
-    height: 55px;
-    /* change if needed */
-    width: auto;
-  }
-
-  .logo-text {
-    margin-left: 8px;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  /* --- Responsive Rules for Construction Page --- */
-
-@media (max-width: 992px) {
-  /* Tablet views */
-  .grid-2, .grid-4 {
-    grid-template-columns: 1fr; /* Do columns ki jagah ek column ho jayega */
-    gap: 40px;
-  }
-  
-  .page-header h1 {
-    font-size: 2.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Mobile views */
-  .navbar .container {
-    padding: 10px 20px;
-  }
-
-  
-  /* Hamburger Menu Styling */
-  .nav-links {
-    display: none; /* Mobile par menu chhupa rahega */
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* Navbar ke thik niche */
-    left: 0;
-    width: 100%;
-    background: #111; /* Dark background jo aapke theme se match kare */
-    padding: 20px;
-    z-index: 1000;
-    border-bottom: 2px solid var(--primary);
-  }
-
-  /* Jab JS toggle karega tab dikhega */
-  .nav-links.active {
-    display: flex;
-  }
-
-  .mobile-toggle {
-    display: block; /* Hamburger icon dikhane ke liye */
-    font-size: 1.8rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  .page-header h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-  }
-
-  .section {
-    padding: 50px 0;
-  }
-
-  /* Gallery boxes ko mobile par thoda chota karna */
-  div[style*="height: 250px"] {
-    height: 200px !important;
-  }
-}
-
-/* Images aur video containers ko responsive rakhne ke liye */
-img, .page-header-bg {
-  max-width: 100%;
-  height: auto;
-}
-</style>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,25 +7,74 @@ img, .page-header-bg {
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+/* --- Global & Scroll Fix --- */
+* { box-sizing: border-box; }
+html, body { 
+  max-width: 100%; 
+  overflow-x: hidden; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* --- Logo Fix (No Stretching) --- */
+.logo-img {
+  height: 55px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block;
+}
+
+/* --- Hamburger & Nav Fix --- */
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block !important; /* Force visibility */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Default hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px;
+    z-index: 1000;
+    list-style: none;
+    border-bottom: 2px solid var(--primary, #f39c12);
+  }
+
+  .nav-links.active {
+    display: flex !important; /* JS click par show hoga */
+  }
+
+  /* Image & Header Fix */
+  .grid-2, .grid-4 { grid-template-columns: 1fr !important; }
+  .page-header h1 { font-size: 1.8rem !important; }
+}
+  </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
   <nav class="navbar">
-    <div class="container nav-container">
-
-
+    <div class="container nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
       <a href="index.html" class="logo">
         <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
         <span class="logo-text">FEDAKZ</span>
       </a>
-      <button class="mobile-toggle">☰</button>
+
+      <button class="mobile-toggle" style="display: none;">☰</button>
 
       <ul class="nav-links">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -160,9 +86,8 @@ img, .page-header-bg {
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <img src="hero-construction.jpg" alt="Construction Header" class="page-header-bg">
+  <header class="page-header" style="position: relative; overflow: hidden;">
+    <img src="hero-construction.jpg" alt="Construction Header" class="page-header-bg" style="width: 100%;">
     <div class="hero-overlay"></div>
     <div class="container page-header-content">
       <h1>CONSTRUCTION <br> & RENOVATION</h1>
@@ -170,10 +95,9 @@ img, .page-header-bg {
     </div>
   </header>
 
-  <!-- Content -->
   <section class="section">
     <div class="container">
-      <div class="grid grid-2">
+      <div class="grid grid-2" style="grid-template-columns: 1fr 1fr; align-items: center;">
         <div>
           <span class="text-primary" style="font-weight: 700; text-transform: uppercase;">Our Services</span>
           <h2 style="font-size: 2.5rem; margin-bottom: 20px;">EXPERTISE IN EVERY BRICK</h2>
@@ -183,19 +107,11 @@ img, .page-header-bg {
             control to every project.
           </p>
 
-          <ul class="grid" style="gap: 15px;">
-            <li class="flex items-center" style="gap: 10px;">
-              <span style="color: var(--primary);">✓</span> Commercial Building Construction
-            </li>
-            <li class="flex items-center" style="gap: 10px;">
-              <span style="color: var(--primary);">✓</span> Residential Renovations
-            </li>
-            <li class="flex items-center" style="gap: 10px;">
-              <span style="color: var(--primary);">✓</span> Structural Reinforcement
-            </li>
-            <li class="flex items-center" style="gap: 10px;">
-              <span style="color: var(--primary);">✓</span> Project Management
-            </li>
+          <ul style="list-style: none; padding: 0; display: grid; gap: 15px;">
+            <li><span style="color: var(--primary);">✓</span> Commercial Building Construction</li>
+            <li><span style="color: var(--primary);">✓</span> Residential Renovations</li>
+            <li><span style="color: var(--primary);">✓</span> Structural Reinforcement</li>
+            <li><span style="color: var(--primary);">✓</span> Project Management</li>
           </ul>
 
           <div style="margin-top: 40px;">
@@ -204,13 +120,10 @@ img, .page-header-bg {
         </div>
 
         <div>
-          <!-- Simple Project Gallery Mockup -->
-          <div
-            style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+          <div style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
             PROJECT GALLERY 1
           </div>
-          <div
-            style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted);">
+          <div style="background: var(--bg-card); height: 250px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;">
             PROJECT GALLERY 2
           </div>
         </div>
@@ -218,7 +131,7 @@ img, .page-header-bg {
     </div>
   </section>
 
-  <!-- Footer -->
+
   <footer>
     <div class="container">
       <div class="grid grid-4" style="margin-bottom: 40px;">
@@ -228,6 +141,7 @@ img, .page-header-bg {
             <img src="Screenshot 2026-01-26 at 10.30.39 PM.png" alt="FEDAKZ Logo" class="logo-img">
             <span class="logo-text">FEDAKZ</span>
           </a>
+
 
           <p style="color: var(--text-muted); font-size: 0.9rem;">Global leaders in logistics, construction, renovation,
             and interior design.</p>
@@ -275,17 +189,15 @@ img, .page-header-bg {
   </footer>
 
   <script src="script.js">
-    document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navLinks = document.querySelector('.nav-links');
+  const toggle = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            // Ye line 'active' class ko bar-bar add aur remove karegi
-            navLinks.classList.toggle('active');
-        });
-    }
-});
+  if(toggle) {
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+  }
+</script>
   </script>
 </body>
 
