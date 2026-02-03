@@ -1,6 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+
+  /* --- Overflow Fix --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* Side scroll ko block karega */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Container Fix --- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* --- Global Grid Fix --- */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* --- Mobile Specific Fix (768px se niche) --- */
+@media (max-width: 768px) {
+  .grid-2, .grid-4 {
+    grid-template-columns: 1fr !important; /* Columns ko ek ke niche ek kar dega */
+  }
+
+  h1 {
+    font-size: 2rem !important; /* Bada text chota karega */
+    word-wrap: break-word;
+  }
+
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Image responsive fix */
+  .page-header-bg, img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  /* Hamburger Menu Display Fix */
+  .nav-links {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex !important; /* JS click par menu dikhayega */
+  }
+
+  .mobile-toggle {
+    display: block !important;
+  }
+}
   .logo {
     display: flex;
     align-items: center;
@@ -83,6 +149,8 @@ img {
   height: auto;
   display: block;
 }
+
+
 </style>
 
 <head>
@@ -233,13 +301,15 @@ img {
   </footer>
 
   <script src="script.js">
+  const toggle = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-const toggle = document.querySelector('.mobile-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+  if(toggle) {
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+  }
+</script>
   </script>
 </body>
 
